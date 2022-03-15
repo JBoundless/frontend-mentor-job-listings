@@ -30,7 +30,7 @@ const JobBoard = ({
       <div>
         <img
           className="-mt-16 mb-4 w-20 h-20 sm:mt-0 sm:h-24 sm:w-24 sm:mb-0"
-          src="${logo}"
+          src="..${logo}"
           alt={company}
         />
       </div>
