@@ -7,9 +7,15 @@ export default function App() {
   const [jobs, setJobs] = useState([]);
   const [filters, setFilters] = useState([]);
 
-  useEffect(() => {
+  fetch('/data.json')
+    .then(res => res.json())
+    .then(data => {
+      setJobs(data)
+    })
+
+  /* useEffect(() => {
     setJobs(data);
-  }, []);
+  }, []); */
 
   const filterFunction = ({ role, level, tools, languages }) => {
     if (filters.length === 0) {
